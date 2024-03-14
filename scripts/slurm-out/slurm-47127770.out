@@ -1,0 +1,89 @@
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version v1.94.1 Linux
+* Built at Nov 15 2022 21:14:25, by GCC 8.5
+* (C) 2010-present, Yang Lab, Westlake University
+* Please report bugs to Jian Yang <jian.yang@westlake.edu.cn>
+*******************************************************************
+Analysis started at 02:11:09 GMT on Mon Mar 04 2024.
+Hostname: cpu-p-225
+
+Accepted options:
+--reml
+--grm /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/full_grm
+--pheno /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_HCP_forGWAS.txt
+--mpheno 126
+--reml-pred-rand
+--qcovar /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMqcovar.txt
+--covar /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMcovardiscrete.txt
+--threads 20
+--out /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_125/r_HCP_h2_node_125
+
+Note: the program will be running on 20 threads.
+
+Reading IDs of the GRM from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/full_grm.grm.id].
+31797 IDs are read from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/full_grm.grm.id].
+Reading the GRM from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/full_grm.grm.bin].
+GRM for 31797 individuals are included from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/full_grm.grm.bin].
+Reading phenotypes from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_HCP_forGWAS.txt].
+There are 361 traits specified in the file [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_HCP_forGWAS.txt].
+Trait #126 is included for analysis.
+Non-missing phenotypes of 35083 individuals are included from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_HCP_forGWAS.txt].
+Reading quantitative covariate(s) from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMqcovar.txt].
+47 quantitative covariate(s) of 31798 individuals are included from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMqcovar.txt].
+Reading discrete covariate(s) from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMcovardiscrete.txt].
+2 discrete covariate(s) of 31798 individuals are included from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMcovardiscrete.txt].
+
+47 quantitative variable(s) included as covariate(s).
+2 discrete variable(s) included as covariate(s).
+30716 individuals are in common in these files.
+
+Performing  REML analysis ... (Note: may take hours depending on sample size).
+30716 observations, 51 fixed effect(s), and 2 variance component(s)(including residual variance).
+Calculating prior values of variance components by EM-REML ...
+Updated prior values: 0.000501223  0.00052113
+logL: 90077
+Running AI-REML algorithm ...
+Iter.	logL	V(G)	V(e)	
+1	90096.33	0.00033	0.00067	
+2	90247.99	0.00022	0.00077	
+3	90316.67	0.00015	0.00084	
+4	90347.56	0.00011	0.00088	
+5	90361.53	0.00008	0.00091	
+6	90367.91	0.00006	0.00093	
+7	90370.85	0.00005	0.00094	
+8	90372.21	0.00004	0.00095	
+9	90372.85	0.00004	0.00096	
+10	90373.15	0.00002	0.00097	
+11	90373.42	0.00002	0.00097	
+12	90373.42	0.00002	0.00097	
+Log-likelihood ratio converged.
+
+Calculating the logLikelihood for the reduced model ...
+(variance component 1 is dropped from the model)
+Calculating prior values of variance components by EM-REML ...
+Updated prior values: 0.00100
+logL: 90372.14057
+Running AI-REML algorithm ...
+Iter.	logL	V(e)	
+1	90372.43	0.00100	
+2	90372.43	0.00100	
+Log-likelihood ratio converged.
+
+Summary result of REML analysis:
+Source	Variance	SE
+V(G)	0.000024	0.000017
+V(e)	0.000973	0.000019
+Vp	0.000997	0.000008
+V(G)/Vp	0.024162	0.017179
+
+Sampling variance/covariance of the estimates of variance components:
+2.937081e-10	-2.902391e-10	
+-2.902391e-10	3.516617e-10	
+
+Summary result of REML analysis has been saved in the file [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_125/r_HCP_h2_node_125.hsq].
+
+BLUP solutions of the genetic effects for 30716 individuals have been saved in the file [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_125/r_HCP_h2_node_125.indi.blp].
+
+Analysis finished at 02:26:09 GMT on Mon Mar 04 2024
+Overall computational time: 14 minutes 59 sec.

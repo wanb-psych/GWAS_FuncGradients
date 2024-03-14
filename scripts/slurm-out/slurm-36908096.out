@@ -1,0 +1,542 @@
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version v1.94.1 Linux
+* Built at Nov 15 2022 21:14:25, by GCC 8.5
+* (C) 2010-present, Yang Lab, Westlake University
+* Please report bugs to Jian Yang <jian.yang@westlake.edu.cn>
+*******************************************************************
+Analysis started at 09:42:24 GMT on Fri Dec 08 2023.
+Hostname: cpu-p-237
+
+Options: 
+ 
+--fastGWA-mlm 
+--mbfile /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Fast_GWAS_pathfile.txt 
+--grm-sparse /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/sp_grm 
+--pheno /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_UKB_forGWAS.txt 
+--mpheno 37 
+--qcovar /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMqcovar.txt 
+--covar /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMcovardiscrete.txt 
+--threads 20 
+--out /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_36/r_UKB_GWAS_auto_node36 
+
+The program will be running with up to 20 threads.
+Reading PLINK sample file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_1.fam]...
+31797 individuals to be included from the sample file.
+Checking other sample files...
+  All the files checked are OK.
+Reading phenotype data from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_UKB_forGWAS.txt]...
+30712 overlapping individuals with non-missing data to be included from the phenotype file.
+30712 individuals to be included. 14409 males, 16303 females, 0 unknown.
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_1.bim]...
+1263308 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_2.bim]...
+2620714 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_3.bim]...
+3755293 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_4.bim]...
+4912427 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_5.bim]...
+5944879 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_6.bim]...
+6994439 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_7.bim]...
+7933805 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_8.bim]...
+8819258 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_9.bim]...
+9511308 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_10.bim]...
+10318751 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_11.bim]...
+11105282 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_12.bim]...
+11870800 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_13.bim]...
+12450029 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_14.bim]...
+12972984 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_15.bim]...
+13435085 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_16.bim]...
+13945292 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_17.bim]...
+14392996 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_18.bim]...
+14848032 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_19.bim]...
+15222055 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_20.bim]...
+15578065 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_21.bim]...
+15795966 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_22.bim]...
+16018073 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_X.bim]...
+16346495 SNPs to be included from BIM file(s).
+Reading quantitative covariates from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMqcovar.txt].
+47 covariates of 31797 samples to be included.
+Reading discrete covariates from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMcovardiscrete.txt].
+2 covariates of 31797 samples to be included.
+47 qcovar, 2 covar and 0 rcovar to be included.
+31797 common individuals among the covariate files to be included.
+30712 overlapping individuals with non-missing data to be included from the covariate file(s).
+Reading the sparse GRM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/sp_grm]...
+After matching all the files, 30712 individuals to be included in the analysis.
+Estimating the genetic variance (Vg) by fastGWA-REML (grid search)...
+Iteration 1, step size: 1.6923e-05, logL: 89850.9. Vg: 0.000135384, searching range: 0.000118461 to 0.000152307
+Iteration 2, step size: 2.25641e-06, logL: 89850.9. Vg: 0.000141025, searching range: 0.000138769 to 0.000143282
+Iteration 3, step size: 3.00854e-07, logL: 89850.9. Vg: 0.000141176, searching range: 0.000140875 to 0.000141477
+Iteration 4, step size: 4.01139e-08, logL: 89850.9. Vg: 0.000141116, searching range: 0.000141076 to 0.000141156
+Iteration 5, step size: 5.34852e-09, logL: 89850.9. Vg: 0.000141102, searching range: 0.000141097 to 0.000141108
+Iteration 6, step size: 7.13136e-10, logL: 89850.9. Vg: 0.000141098, searching range: 0.000141097 to 0.000141098
+Iteration 7, step size: 9.50848e-11, logL: 89850.9. Vg: 0.000141098, searching range: 0.000141097 to 0.000141098
+Iteration 8, step size: 1.2678e-11, logL: 89850.9. Vg: 0.000141097, searching range: 0.000141097 to 0.000141097
+Iteration 9, step size: 1.6904e-12, logL: 89850.9. Vg: 0.000141097, searching range: 0.000141097 to 0.000141097
+Iteration 10, step size: 1.12693e-13, logL: 89850.9. Vg: 0.000141097, searching range: 0.000141097 to 0.000141097
+Iteration 11, step size: 1.50257e-14, logL: 89850.9. Vg: 0.000141097, searching range: 0.000141097 to 0.000141097
+Iteration 12, step size: 2.00343e-15, logL: 89850.9. Vg: 0.000141097, searching range: 0.000141097 to 0.000141097
+Iteration 13, step size: 2.67126e-16, logL: 89850.9. Vg: 0.000141097, searching range: 0.000141097 to 0.000141097
+fastGWA-REML converged.
+logL: 89850.9
+Sampling variance/covariance of the estimates of Vg and Ve:
+  1.2457e-08 -1.24381e-08
+-1.24381e-08  1.24921e-08
+
+Source	Variance	SE
+Vg	0.000141097	0.000111611
+Ve	0.000916593	0.000111768
+Vp	0.00105769
+
+Heritability = 0.133402 (Pval = 0.206161)
+fastGWA-REML runtime: 0.247172 sec.
+Warning: the estimate of Vg is not statistically significant (i.e., p > 0.05). This is likely because the number of closely related individuals in the sample is not large enough. 
+In this case, the program will use linear regression for association test.
+
+Performing fastGWA linear regression analysis...
+fastGWA results will be saved in text format to [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_36/r_UKB_GWAS_auto_node36.fastGWA].
+  Filtering out variants with MAF < 0.0001, or customise it with --maf flag.
+  Filtering out variants with missingness rate > 0.10, or customise it with --geno flag.
+Unexpected PLINK 1 .bed file size (expected 2610954903 bytes).
+
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version v1.94.1 Linux
+* Built at Nov 15 2022 21:14:25, by GCC 8.5
+* (C) 2010-present, Yang Lab, Westlake University
+* Please report bugs to Jian Yang <jian.yang@westlake.edu.cn>
+*******************************************************************
+Analysis started at 09:46:33 GMT on Fri Dec 08 2023.
+Hostname: cpu-p-237
+
+Options: 
+ 
+--fastGWA-mlm 
+--mbfile /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Fast_GWAS_pathfile.txt 
+--grm-sparse /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/sp_grm 
+--pheno /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_UKB_forGWAS.txt 
+--mpheno 37 
+--qcovar /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMqcovar.txt 
+--covar /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMcovardiscrete.txt 
+--threads 20 
+--model-only 
+--keep /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/chrX.idlist 
+--out /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_36/r_UKB_GWAS_model_node36 
+
+The program will be running with up to 20 threads.
+Reading PLINK sample file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_1.fam]...
+31797 individuals to be included from the sample file.
+Checking other sample files...
+  All the files checked are OK.
+Get 31791 samples from list [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/chrX.idlist].
+After keeping individuals, 31791 subjects remain.
+Reading phenotype data from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_UKB_forGWAS.txt]...
+30706 overlapping individuals with non-missing data to be included from the phenotype file.
+30706 individuals to be included. 14407 males, 16299 females, 0 unknown.
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_1.bim]...
+1263308 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_2.bim]...
+2620714 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_3.bim]...
+3755293 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_4.bim]...
+4912427 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_5.bim]...
+5944879 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_6.bim]...
+6994439 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_7.bim]...
+7933805 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_8.bim]...
+8819258 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_9.bim]...
+9511308 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_10.bim]...
+10318751 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_11.bim]...
+11105282 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_12.bim]...
+11870800 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_13.bim]...
+12450029 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_14.bim]...
+12972984 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_15.bim]...
+13435085 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_16.bim]...
+13945292 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_17.bim]...
+14392996 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_18.bim]...
+14848032 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_19.bim]...
+15222055 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_20.bim]...
+15578065 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_21.bim]...
+15795966 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_22.bim]...
+16018073 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_X.bim]...
+16346495 SNPs to be included from BIM file(s).
+Reading quantitative covariates from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMqcovar.txt].
+47 covariates of 31797 samples to be included.
+Reading discrete covariates from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMcovardiscrete.txt].
+2 covariates of 31797 samples to be included.
+47 qcovar, 2 covar and 0 rcovar to be included.
+31797 common individuals among the covariate files to be included.
+30706 overlapping individuals with non-missing data to be included from the covariate file(s).
+Reading the sparse GRM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/sp_grm]...
+After matching all the files, 30706 individuals to be included in the analysis.
+Estimating the genetic variance (Vg) by fastGWA-REML (grid search)...
+Iteration 1, step size: 1.69252e-05, logL: 89831.4. Vg: 0.000135402, searching range: 0.000118476 to 0.000152327
+Iteration 2, step size: 2.25669e-06, logL: 89831.4. Vg: 0.000141043, searching range: 0.000138787 to 0.0001433
+Iteration 3, step size: 3.00892e-07, logL: 89831.4. Vg: 0.000141194, searching range: 0.000140893 to 0.000141495
+Iteration 4, step size: 4.0119e-08, logL: 89831.4. Vg: 0.000141334, searching range: 0.000141294 to 0.000141374
+Iteration 5, step size: 5.3492e-09, logL: 89831.4. Vg: 0.000141342, searching range: 0.000141337 to 0.000141348
+Iteration 6, step size: 7.13226e-10, logL: 89831.4. Vg: 0.000141342, searching range: 0.000141341 to 0.000141343
+Iteration 7, step size: 9.50969e-11, logL: 89831.4. Vg: 0.000141342, searching range: 0.000141342 to 0.000141343
+Iteration 8, step size: 1.26796e-11, logL: 89831.4. Vg: 0.000141342, searching range: 0.000141342 to 0.000141342
+Iteration 9, step size: 1.69061e-12, logL: 89831.4. Vg: 0.000141342, searching range: 0.000141342 to 0.000141342
+Iteration 10, step size: 2.25415e-13, logL: 89831.4. Vg: 0.000141342, searching range: 0.000141342 to 0.000141342
+Iteration 11, step size: 3.00553e-14, logL: 89831.4. Vg: 0.000141342, searching range: 0.000141342 to 0.000141342
+Iteration 12, step size: 4.00737e-15, logL: 89831.4. Vg: 0.000141342, searching range: 0.000141342 to 0.000141342
+Iteration 13, step size: 5.34317e-16, logL: 89831.4. Vg: 0.000141342, searching range: 0.000141342 to 0.000141342
+fastGWA-REML converged.
+logL: 89831.4
+Sampling variance/covariance of the estimates of Vg and Ve:
+ 1.24613e-08 -1.24424e-08
+-1.24424e-08  1.24964e-08
+
+Source	Variance	SE
+Vg	0.000141342	0.00011163
+Ve	0.000916482	0.000111787
+Vp	0.00105782
+
+Heritability = 0.133616 (Pval = 0.205454)
+fastGWA-REML runtime: 0.25653 sec.
+Warning: the estimate of Vg is not statistically significant (i.e., p > 0.05). This is likely because the number of closely related individuals in the sample is not large enough. 
+In this case, the program will use linear regression for association test.
+Saving fastGWA model information...
+Sample information has been saved to [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_36/r_UKB_GWAS_model_node36.fastGWA.mdl.id].
+Model has been saved to [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_36/r_UKB_GWAS_model_node36.fastGWA.mdl.bin].
+Use "--load-model /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_36/r_UKB_GWAS_model_node36.fastGWA" to load the model file for further analysis.
+Note: the sample IDs (FID IID) in the model file must also present in the genotype file for further association step.
+
+Analysis finished at 09:47:31 GMT on Fri Dec 08 2023
+Overall computational time: 58.52 sec.
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version v1.94.1 Linux
+* Built at Nov 15 2022 21:14:25, by GCC 8.5
+* (C) 2010-present, Yang Lab, Westlake University
+* Please report bugs to Jian Yang <jian.yang@westlake.edu.cn>
+*******************************************************************
+Analysis started at 09:47:31 GMT on Fri Dec 08 2023.
+Hostname: cpu-p-237
+
+Options: 
+ 
+--bfile /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_X 
+--load-model /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_36/r_UKB_GWAS_model_node36.fastGWA 
+--geno 0.1 
+--out /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_36/r_UKB_GWAS_X_node36 
+--threads 20 
+
+The program will be running with up to 20 threads.
+Reading PLINK FAM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_X.fam]...
+31791 individuals to be included from FAM file.
+31791 individuals to be included. 14962 males, 16829 females, 0 unknown.
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_X.bim]...
+328422 SNPs to be included from BIM file(s).
+Threshold to filter variants: missingness rate < 0.100000.
+Loading saved model file prefixed with [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_36/r_UKB_GWAS_model_node36.fastGWA]...
+Note: phenotype, covariates, sparse GRM and association test methods are included in the model file, thus these flags will be ignored.
+  30706 valid individuals to be included.
+  loading phenotypes...
+  loading covariates...
+  loaded successfully.
+
+Performing fastGWA linear regression analysis...
+fastGWA results will be saved in text format to [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_36/r_UKB_GWAS_X_node36.fastGWA].
+  Filtering out variants with MAF < 0.0001, or customise it with --maf flag.
+  100% finished in 3.9 sec
+328422 SNPs have been processed.
+Saved 328422 SNPs.
+
+Analysis finished at 09:47:36 GMT on Fri Dec 08 2023
+Overall computational time: 4.47 sec.
+Traceback (most recent call last):
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/formats/csvs.py", line 259, in save
+    self._save()
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/formats/csvs.py", line 264, in _save
+    self._save_body()
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/formats/csvs.py", line 302, in _save_body
+    self._save_chunk(start_i, end_i)
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/formats/csvs.py", line 313, in _save_chunk
+    libwriters.write_csv_rows(
+  File "pandas/_libs/writers.pyx", line 72, in pandas._libs.writers.write_csv_rows
+OSError: [Errno 122] Disk quota exceeded
+
+During handling of the above exception, another exception occurred:
+
+OSError: [Errno 122] Disk quota exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hpcwan1/rds/hpc-work/project/gwas_fg/scripts/python/py05_GWAS_auto_X.py", line 11, in <module>
+    new.to_csv(output, sep='\t', index=None)
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/core/generic.py", line 3772, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/formats/format.py", line 1186, in to_csv
+    csv_formatter.save()
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/formats/csvs.py", line 259, in save
+    self._save()
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/common.py", line 138, in __exit__
+    self.close()
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/common.py", line 130, in close
+    handle.close()
+OSError: [Errno 122] Disk quota exceeded
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version v1.94.1 Linux
+* Built at Nov 15 2022 21:14:25, by GCC 8.5
+* (C) 2010-present, Yang Lab, Westlake University
+* Please report bugs to Jian Yang <jian.yang@westlake.edu.cn>
+*******************************************************************
+Analysis started at 09:47:41 GMT on Fri Dec 08 2023.
+Hostname: cpu-p-237
+
+Options: 
+ 
+--fastGWA-mlm 
+--mbfile /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Fast_GWAS_pathfile.txt 
+--grm-sparse /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/sp_grm 
+--pheno /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_UKB_forGWAS.txt 
+--mpheno 38 
+--qcovar /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMqcovar.txt 
+--covar /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMcovardiscrete.txt 
+--threads 20 
+--out /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_37/r_UKB_GWAS_auto_node37 
+
+The program will be running with up to 20 threads.
+Reading PLINK sample file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_1.fam]...
+31797 individuals to be included from the sample file.
+Checking other sample files...
+  All the files checked are OK.
+Reading phenotype data from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_UKB_forGWAS.txt]...
+30712 overlapping individuals with non-missing data to be included from the phenotype file.
+30712 individuals to be included. 14409 males, 16303 females, 0 unknown.
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_1.bim]...
+1263308 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_2.bim]...
+2620714 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_3.bim]...
+3755293 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_4.bim]...
+4912427 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_5.bim]...
+5944879 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_6.bim]...
+6994439 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_7.bim]...
+7933805 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_8.bim]...
+8819258 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_9.bim]...
+9511308 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_10.bim]...
+10318751 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_11.bim]...
+11105282 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_12.bim]...
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version v1.94.1 Linux
+* Built at Nov 15 2022 21:14:25, by GCC 8.5
+* (C) 2010-present, Yang Lab, Westlake University
+* Please report bugs to Jian Yang <jian.yang@westlake.edu.cn>
+*******************************************************************
+Analysis started at 09:51:48 GMT on Fri Dec 08 2023.
+Hostname: cpu-p-237
+
+Options: 
+ 
+--bfile /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_X 
+--load-model /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_37/r_UKB_GWAS_model_node37.fastGWA 
+--geno 0.1 
+--out /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_37/r_UKB_GWAS_X_node37 
+--threads 20 
+
+The program will be running with up to 20 threads.
+Reading PLINK FAM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_X.fam]...
+31791 individuals to be included from FAM file.
+31791 individuals to be included. 14962 males, 16829 females, 0 unknown.
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_X.bim]...
+328422 SNPs to be included from BIM file(s).
+Threshold to filter variants: missingness rate < 0.100000.
+Loading saved model file prefixed with [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_37/r_UKB_GWAS_model_node37.fastGWA]...
+Note: phenotype, covariates, sparse GRM and association test methods are included in the model file, thus these flags will be ignored.
+Error: the file [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_37/r_UKB_GWAS_model_node37.fastGWA.mdl.id] is empty.
+An error occurs, please check the options or data
+Traceback (most recent call last):
+  File "/home/hpcwan1/rds/hpc-work/project/gwas_fg/scripts/python/py05_GWAS_auto_X.py", line 8, in <module>
+    xsome=pd.read_csv(input_2+'.fastGWA', sep='\t')
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 912, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 577, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1407, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/parsers/readers.py", line 1661, in _make_engine
+    self.handles = get_handle(
+  File "/home/hpcwan1/rds/hpc-work/software/anaconda3/envs/GWAS/lib/python3.8/site-packages/pandas/io/common.py", line 859, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_37/r_UKB_GWAS_X_node37.fastGWA'
+*******************************************************************
+* Genome-wide Complex Trait Analysis (GCTA)
+* version v1.94.1 Linux
+* Built at Nov 15 2022 21:14:25, by GCC 8.5
+* (C) 2010-present, Yang Lab, Westlake University
+* Please report bugs to Jian Yang <jian.yang@westlake.edu.cn>
+*******************************************************************
+Analysis started at 09:51:50 GMT on Fri Dec 08 2023.
+Hostname: cpu-p-237
+
+Options: 
+ 
+--fastGWA-mlm 
+--mbfile /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Fast_GWAS_pathfile.txt 
+--grm-sparse /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/sp_grm 
+--pheno /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_UKB_forGWAS.txt 
+--mpheno 39 
+--qcovar /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMqcovar.txt 
+--covar /home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMcovardiscrete.txt 
+--threads 20 
+--out /home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_38/r_UKB_GWAS_auto_node38 
+
+The program will be running with up to 20 threads.
+Reading PLINK sample file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_1.fam]...
+31797 individuals to be included from the sample file.
+Checking other sample files...
+  All the files checked are OK.
+Reading phenotype data from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/r_UKB_forGWAS.txt]...
+30712 overlapping individuals with non-missing data to be included from the phenotype file.
+30712 individuals to be included. 14409 males, 16303 females, 0 unknown.
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_1.bim]...
+1263308 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_2.bim]...
+2620714 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_3.bim]...
+3755293 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_4.bim]...
+4912427 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_5.bim]...
+5944879 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_6.bim]...
+6994439 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_7.bim]...
+7933805 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_8.bim]...
+8819258 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_9.bim]...
+9511308 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_10.bim]...
+10318751 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_11.bim]...
+11105282 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_12.bim]...
+11870800 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_13.bim]...
+12450029 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_14.bim]...
+12972984 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_15.bim]...
+13435085 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_16.bim]...
+13945292 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_17.bim]...
+14392996 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_18.bim]...
+14848032 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_19.bim]...
+15222055 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_20.bim]...
+15578065 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_21.bim]...
+15795966 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_v2_22.bim]...
+16018073 SNPs to be included from BIM file(s).
+Reading PLINK BIM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/ukbchr_v2_r2correct_X.bim]...
+16346495 SNPs to be included from BIM file(s).
+Reading quantitative covariates from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMqcovar.txt].
+47 covariates of 31797 samples to be included.
+Reading discrete covariates from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/WMcovardiscrete.txt].
+2 covariates of 31797 samples to be included.
+47 qcovar, 2 covar and 0 rcovar to be included.
+31797 common individuals among the covariate files to be included.
+30712 overlapping individuals with non-missing data to be included from the covariate file(s).
+Reading the sparse GRM file from [/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/genetics_data/Neuroimaging_samples/sp_grm]...
+After matching all the files, 30712 individuals to be included in the analysis.
+Estimating the genetic variance (Vg) by fastGWA-REML (grid search)...
+Iteration 1, step size: 1.93267e-05, logL: 87817.5. Vg: 0.000425187, searching range: 0.00040586 to 0.000444513
+Iteration 2, step size: 2.57689e-06, logL: 87817.5. Vg: 0.000429052, searching range: 0.000426475 to 0.000431629
+Iteration 3, step size: 3.43585e-07, logL: 87817.5. Vg: 0.000428193, searching range: 0.000427849 to 0.000428536
+Iteration 4, step size: 4.58113e-08, logL: 87817.5. Vg: 0.000428216, searching range: 0.00042817 to 0.000428262
+Iteration 5, step size: 6.10818e-09, logL: 87817.5. Vg: 0.000428207, searching range: 0.000428201 to 0.000428213
+Iteration 6, step size: 8.14424e-10, logL: 87817.5. Vg: 0.000428207, searching range: 0.000428206 to 0.000428208
+Iteration 7, step size: 1.0859e-10, logL: 87817.5. Vg: 0.000428207, searching range: 0.000428207 to 0.000428207
+Iteration 8, step size: 1.44786e-11, logL: 87817.5. Vg: 0.000428207, searching range: 0.000428207 to 0.000428207
+Iteration 9, step size: 1.93049e-12, logL: 87817.5. Vg: 0.000428207, searching range: 0.000428207 to 0.000428207
+Iteration 10, step size: 2.57398e-13, logL: 87817.5. Vg: 0.000428207, searching range: 0.000428207 to 0.000428207
+Iteration 11, step size: 3.43198e-14, logL: 87817.5. Vg: 0.000428207, searching range: 0.000428207 to 0.000428207
+Iteration 12, step size: 4.57597e-15, logL: 87817.5. Vg: 0.000428207, searching range: 0.000428207 to 0.000428207
+Iteration 13, step size: 6.10131e-16, logL: 87817.5. Vg: 0.000428207, searching range: 0.000428207 to 0.000428207
+fastGWA-REML converged.
+logL: 87817.5
+Sampling variance/covariance of the estimates of Vg and Ve:
+ 1.34916e-08 -1.34297e-08
+-1.34297e-08  1.34627e-08
+
+Source	Variance	SE
+Vg	0.000428207	0.000116154
+Ve	0.000779709	0.000116029
+Vp	0.00120792
+
+Heritability = 0.354501 (Pval = 0.000227304)
+fastGWA-REML runtime: 0.410815 sec.
+
+Tuning parameters using 2000 null SNPs...
+  reading genotypes...
+  100% finished in 1.0 sec
+2000 SNPs have been processed.
+Tuning of Gamma finished at the 1000th SNP.
+Mean GRAMMAR-Gamma value = 826.743098
+Tuning of Gamma finished 1.31255 seconds.
+
+Performing fastGWA mixed model association analysis...
+fastGWA results will be saved in text format to [/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g3/node_38/r_UKB_GWAS_auto_node38.fastGWA].
+  Filtering out variants with MAF < 0.0001, or customise it with --maf flag.
+  Filtering out variants with missingness rate > 0.10, or customise it with --geno flag.
+slurmstepd: error: *** JOB 36908096 ON cpu-p-237 CANCELLED AT 2023-12-08T19:42:30 DUE TO TIME LIMIT ***
