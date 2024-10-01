@@ -3,3 +3,6 @@ results
 figures
 data
 vis*
+slurm-out
+*.ipynb
+*.png

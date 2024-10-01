@@ -5,10 +5,13 @@ import numpy as np
 from scipy.io import savemat
 import sys
 
-name = 'UKB' # sys.argv[1] # 'HCP' or 'UKB'
-brain_map_file = '/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/'+name+'_group_grad_mmp.txt'
-dist_mat_file_L = '/home/hpcwan1/rds/hpc-work/project/gwas_fg/src/LeftParcelGeodesicDistmat.txt'
-dist_mat_file_R = '/home/hpcwan1/rds/hpc-work/project/gwas_fg/src/RightParcelGeodesicDistmat.txt'
+name = sys.argv[1] # 'HCP' or 'UKB'
+sparsity = sys.argv[2] # '0.0' or '0.5' or '0.9'
+
+wd='/home/hpcwan1/rds/hpc-work/project/gwas_fg/'
+brain_map_file = wd + 'data/'+name+'_group_grad_mmp_'+sparsity+'.txt'
+dist_mat_file_L = wd + 'src/LeftParcelGeodesicDistmat.txt'
+dist_mat_file_R = wd + 'src/RightParcelGeodesicDistmat.txt'
 
 # generate 10000 permutations for 10 gradients
 base_L = [None] * 10 
@@ -22,5 +25,5 @@ for i in range(10):
   surrogates[i] = np.concatenate((surrogates_L, surrogates_R),axis=1)
   print('finish......gradient...'+str(i+1))
 
-savemat('/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/null_modes/'+name+'_mmp.mat', {name+'_mmp':np.array(surrogates)})
-print('finish......'+name)
+savemat(wd+'results/null_modes/'+name+'_'+sparsity+'.mat', {name+'_'+sparsity:np.array(surrogates)})
+print('finish......',name,sparsity)

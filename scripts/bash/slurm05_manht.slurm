@@ -11,14 +11,14 @@
 #SBATCH -J cpujob
 #SBATCH -p cclake
 #SBATCH --nodes=1
-#SBATCH -c 20
-#SBATCH --time=3:00:00
+#SBATCH -c 10
+#SBATCH --time=2:00:00
 #SBATCH --output=/dev/null
 #SBATCH --mail-type=NONE
+#SBATCH --output /home/hpcwan1/rds/hpc-work/project/gwas_fg/scripts/slurm-out/slurm-%j.out
 #! Uncomment this to prevent the job from being requeued (e.g. if
 #! interrupted by node failure or system downtime):
 ##SBATCH --no-requeue
 
-# flag grad_sparsity gradient_nunber, e.g., grad_refHCP_0.9 1
-bash /home/hpcwan1/rds/hpc-work/project/gwas_fg/scripts/bash/run04_fastGWAS.sh ${1} ${2}
-
+cd /home/hpcwan1/rds/hpc-work/project/gwas_fg/scripts/r
+Rscript manhtn_plot.R

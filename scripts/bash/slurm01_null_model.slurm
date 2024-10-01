@@ -13,10 +13,12 @@
 #SBATCH --nodes=1
 #SBATCH -c 24
 #SBATCH --time=10:00:00
+#SBATCH --output=/dev/null
 #SBATCH --mail-type=NONE
 #! Uncomment this to prevent the job from being requeued (e.g. if
 #! interrupted by node failure or system downtime):
 ##SBATCH --no-requeue
 
-python /home/hpcwan1/rds/hpc-work/project/gwas_fg/scripts/python/py01_generate_null_models.py
+# flags are e.g., HCP 0.0
+python /home/hpcwan1/rds/hpc-work/project/gwas_fg/scripts/python/py01_generate_null_models.py $1 $2
 

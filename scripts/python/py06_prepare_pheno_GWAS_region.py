@@ -1,38 +1,39 @@
 import pandas as pd
 import numpy as np
 import sys
+import os
 
-align_type=sys.argv[1] # 'r_raw_HCP', 'r_raw_UKB', 'r_HCP', 'r_UKB'
+spa=sys.argv[1] # 'grad_refHCP_0.0', 'grad_refHCP_0.5', 'grad_refHCP_0.9'
 grad=sys.argv[2] # 1,2,3 indicate 'g1', 'g2', 'g3'
+wd='/home/hpcwan1/rds/hpc-work/project/gwas_fg/'
 
-df = pd.read_csv('/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/overall_similarity/variogram_z_g'+str(grad)+'_forGWAS.txt', sep=' ')
-df_raw = pd.read_csv('/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/overall_similarity/variogram_z_g'+str(grad)+'.txt', sep=' ')
-df_type = df[['FID','IID',align_type]]
+df = pd.read_csv(wd+'results/similarity/'+spa+'/g'+grad+'.txt', sep=' ')
+df = df[df.columns[:4]]
+indi_grad = wd+'data/'+spa
 
-if align_type == 'r_HCP':
-    indi_grad = '/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/grad_refHCP_mmp/'
-elif align_type == 'r_UKB':
-    indi_grad = '/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/grad_refUKB_mmp/'
-else:
-    indi_grad = '/home/hpcwan1/rds/hpc-work/project/gwas_fg/data/grad_raw_mmp/'
-
-df_new = df_type.fillna('NA')
 node_list=[]
 for node in range(360):
   node_list.append('node_'+str(node+1))
 
-data = np.zeros((len(df_new.IID), 360))
-for sub in range(len(df_new.IID)):
-    tmp = np.loadtxt(indi_grad+'UKB'+str(df_new.IID[sub])+'.txt')[:,int(grad)-1]
-    if df_raw[align_type][np.where(df_raw.IID == df_new.IID[sub])[0][0]] < 0: # flip gradients if negative
-        data[sub] = -tmp
-    else:
-        data[sub] = tmp
+data = np.zeros((len(df.IID), 360))
+for sub in range(len(df.IID)):
+    tmp = np.loadtxt(indi_grad+'/UKB'+str(df.IID[sub])+'.txt')[:,int(grad)-1]
+    data[sub] = tmp
+    
+data[np.isnan(df.r)] = np.nan
         
 df_data=pd.DataFrame(data)
 df_data.columns = node_list
+df_data = df_data.fillna('NA')
 
-df_save = pd.concat([df_new, df_data], axis=1)
+df_save = pd.concat([df, df_data], axis=1)
 
-df_save.to_csv('/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/region_g'+str(grad)+'/'+align_type+'_forGWAS.txt', 
+try:
+    os.mkdir(wd+'results/GWAS/similarity/'+spa+'/region_g'+str(grad))
+except:
+    pass
+
+df_save.to_csv(wd+'results/GWAS/similarity/'+spa+'/region_g'+str(grad)+'/pheno.txt', 
                index=None, sep=' ')
+
+print('finish...', spa, '...gradient', grad)

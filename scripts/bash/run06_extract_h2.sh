@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# e.g., r_HCP and 1 (gradient 1)
+# e.g., grad_refHCP_0.9 and 1 (gradient 1)
 wdir=${1}
 mode=${2}
-path=/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS
+path=/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/GWAS/similarity
 
-output=${path}/${wdir}_region_g${mode}_h2r.txt
+output=${path}/${wdir}/${wdir}_region_g${mode}_h2r.txt
 echo "node,H2r,SE,p" > $output
 for i in {1..360}; do
-  cur_dir=${path}/region_g${mode}/node_$i
+  cur_dir=${path}/${wdir}/region_g${mode}/node_$i
   line=`more ${cur_dir}/${wdir}_h2_node_${i}.hsq | grep "V(G)/Vp"`
   H2r=`echo $line |  awk '{print $2}'`
   SE=`echo $line |  awk '{print $3}'`

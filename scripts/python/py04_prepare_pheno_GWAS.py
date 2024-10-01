@@ -1,29 +1,25 @@
 import pandas as pd
 import numpy as np
 import sys
+import os
 
-input=sys.argv[1]
-output=sys.argv[2]
-df = pd.read_csv(input, sep=' ')
+input=sys.argv[1] # grad_refHCP_0.0
 
-df.r_raw_HCP = abs(df.r_raw_HCP)
-df.r_raw_UKB = abs(df.r_raw_UKB)
-df.r_HCP = abs(df.r_HCP)
-df.r_UKB = abs(df.r_UKB)
+wd='/home/hpcwan1/rds/hpc-work/project/gwas_fg/'
 
-df.r_raw_HCP[df.z_raw_HCP < 1.959964] = np.nan
-df.r_raw_UKB[df.z_raw_UKB < 1.959964] = np.nan
-df.r_HCP[df.z_HCP < 1.959964] = np.nan
-df.r_UKB[df.z_UKB < 1.959964] = np.nan
- 
 new=pd.DataFrame()
-new['FID'] = df.FID
-new['IID'] = df.IID
-new['r_raw_HCP'] = df.r_raw_HCP
-new['r_raw_UKB'] = df.r_raw_UKB
-new['r_HCP'] = df.r_HCP
-new['r_UKB'] = df.r_UKB
 
+for i in range(1,11):
+  df = pd.read_csv(wd+'results/similarity/'+input+'/g'+str(i)+'.txt', sep=' ')
+  df.loc[df['z'] < 1.959964, 'r'] = np.nan
+  new['g'+str(i)] = np.array(df.r)
+
+new.insert(loc=0,column='FID',value=np.array(df.FID))
+new.insert(loc=0,column='IID',value=np.array(df.IID))
 new = new.fillna('NA')
 
-new.to_csv(output, sep=' ', index=None)
+try:
+    os.mkdir(wd+'results/GWAS/similarity/'+input)
+except:
+    pass
+new.to_csv(wd+'results/GWAS/similarity/'+input+'/pheno.txt', sep=' ', index=None)
