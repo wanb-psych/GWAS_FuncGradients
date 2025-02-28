@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import sys
 
+wd='/data/p_02378/UKB_cam/project/gwas_fg/'
 input_1=sys.argv[1]
 input_2=sys.argv[2]
 output=sys.argv[3]
@@ -9,7 +10,7 @@ maf=sys.argv[4]
 autosome=pd.read_csv(input_1, sep='\t')
 xsome=pd.read_csv(input_2, sep='\t')
 
-frq_path='/home/hpcwan1/rds/hpc-work/project/gwas_fg/results/MAF/MAF_ukb_v2_r2correct_v2_'
+frq_path=wd+'results/MAF/MAF_ukb_v2_r2correct_v2_'
 
 snp_maf = []
 for i in range(22):
