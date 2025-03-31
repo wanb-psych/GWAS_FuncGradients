@@ -16,7 +16,7 @@ Preprint: https://doi.org/10.1101/2025.03.03.25323242
 
 - `py04`: preparing phenotype files (global-level) for the heritability analysis and GWAS.
 
-- `py05`: combining autochromosome and sexual chromosome results (because GWAS performed them separately) and filtering the MAF<0.1%.
+- `py05`: combining autochromosome and sexual chromosome results (because GWAS performed them separately) and filtering the MAF<1%.
 
 - `py06`: preparing phenotype files (region-level) for the heritability analysis and GWAS.
 
