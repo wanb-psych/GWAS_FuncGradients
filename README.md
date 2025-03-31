@@ -32,7 +32,7 @@ Preprint: https://doi.org/10.1101/2025.03.03.25323242
 
 - `run04`: GWAS code for gradients using GCTA64.
 
-- `run05`: extracting heritability scores from GCTA64 output.
+- `run06`: extracting heritability scores from GCTA64 output.
 
 ### $ r
 
