@@ -10,9 +10,9 @@ Preprint: https://doi.org/10.1101/2025.03.03.25323242
 
 - `py01`: generating null group-level gradients by variogram, based on the HCP group-level geometric distance.
 
-- `py02`: cosine simirity, Euclidean distance, and Psearson r, between indiviudal gradients and HCP group-level.
+- `py02`: cosine similarity, Euclidean distance, and Pearson r, between individual gradients and HCP group-level.
 
-- `py03`: interate these scores from py03 into one file.
+- `py03`: integrating these scores from py03 into one file.
 
 - `py04`: preparing phenotype files (global-level) for the heritability analysis and GWAS.
 
@@ -20,7 +20,7 @@ Preprint: https://doi.org/10.1101/2025.03.03.25323242
 
 - `py06`: preparing phenotype files (region-level) for the heritability analysis and GWAS.
 
-- `py07`: imputing the missing values of Allen Brain Human Atlas (AHBA) for Glasser parcellation, based on variogram of center coordinates of each parcel in volumetric space.
+- `py07`: imputing the missing gene expression, Allen Human Brain Atlas (AHBA), for Glasser parcellation, based on variogram of center coordinates of each parcel in volumetric space.
 
 - `visualization`: generating all figures and other statistics in the paper.
 
@@ -36,7 +36,7 @@ Preprint: https://doi.org/10.1101/2025.03.03.25323242
 
 ### $ r
 
-- `manhtn`: manhattan plots for GWAS summeries using R package "CMplot".
+- `manhtn`: Manhattan plots for GWAS summaries using R package "CMplot".
 
 
 ## Key toolboxes
